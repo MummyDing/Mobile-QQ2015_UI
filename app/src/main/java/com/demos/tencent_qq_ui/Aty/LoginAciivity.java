@@ -1,11 +1,8 @@
 package com.demos.tencent_qq_ui.Aty;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.internal.widget.AdapterViewCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -13,7 +10,6 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -49,17 +45,22 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
         linearLayout = (LinearLayout) findViewById(R.id.userName_layout);
         password_inputbox = (EditText) findViewById(R.id.password_inputbox);
         username_inputbox = (EditText) findViewById(R.id.username_inputbox);
-        popupBtn = (ImageButton) findViewById(R.id.showUser_btn);
-        popupBtn.setOnClickListener(this);
         showUser_btn = (ImageButton) findViewById(R.id.showUser_btn);
+        popupBtn = (ImageButton) findViewById(R.id.showUser_btn);
+
+
+
         popupwindow_view = getLayoutInflater().inflate(R.layout.username_listview, null);
         listView = (ListView) popupwindow_view.findViewById(R.id.user_listview);
         list = new ArrayList<UserNameItem>();
 
 
-        /*
-        * 放点数据进去
-        * */
+        /**
+         * 待完善
+         * 调试用
+         * 放点数据进去
+         * 以后要封装成函数
+         * */
         UserNameItem userNameItem = new UserNameItem();
         userNameItem.setUserName("33333333");
         userNameItem.setAvatarImage(R.drawable.avatar);
@@ -80,7 +81,7 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
         userNameAdapter = new UserNameAdapter(this,R.layout.username_item,list);
         listView.setAdapter(userNameAdapter);
         listView.setOnItemClickListener(this);
-
+        popupBtn.setOnClickListener(this);
 
         userNameAdapter.notifyDataSetChanged();
         initPopupWindow();
@@ -110,13 +111,13 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
 
     @Override
     public void onClick(View v) {
-        Log.d("Click","点到了 show_btn");
         switch (v.getId()){
             case R.id.showUser_btn:
                 if(popupWindow.isShowing() == false)
                 {
                     showUser_btn.setBackgroundResource(R.drawable.up_arrow);
                     popupWindow.showAtLocation(linearLayout, Gravity.CENTER | Gravity.TOP, 0, locationY);
+                    //一定要update
                     popupWindow.update(0,locationY, WindowManager.LayoutParams.WRAP_CONTENT,WindowManager.LayoutParams.WRAP_CONTENT,true);
                 }
                 break;
@@ -130,10 +131,11 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        UserNameAdapter.itemPos = position;
         String username = userNameAdapter.getItem(position).getUserName();
         username_inputbox.setText(username);
+        //移动光标指行尾
         username_inputbox.setSelection(username.length());
+        //隐藏下拉列表
         popupWindow.dismiss();
     }
 }

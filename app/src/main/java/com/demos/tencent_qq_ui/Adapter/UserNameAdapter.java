@@ -19,13 +19,14 @@ import com.demos.tencent_qq_ui.Item.UserNameItem;
 import java.util.List;
 
 /**
+ * 显示已保存账号下拉listview的适配器类
  * Created by mummyding on 15-8-7.
  */
 public class UserNameAdapter extends ArrayAdapter<UserNameItem> implements View.OnClickListener{
 
-    List<UserNameItem> list ;
-    public static int itemPos;
-    public static String username;
+    private List<UserNameItem> list ;
+    private int itemPos;
+    private String username;
     public UserNameAdapter(Context context, int resource, List<UserNameItem> objects) {
         super(context, resource, objects);
         list = objects;
@@ -47,6 +48,7 @@ public class UserNameAdapter extends ArrayAdapter<UserNameItem> implements View.
             viewHolder.avatar_img.setImageDrawable(ContextCompat.getDrawable(getContext(),userNameItem.getAvatarImage()));
             //添加删除按钮 click 监听事件
             viewHolder.del_btn = (ImageButton) view.findViewById(R.id.del_btn);
+            //保存当前按钮的position
             viewHolder.del_btn.setTag(position);
             viewHolder.del_btn.setOnClickListener(this);
 
@@ -67,13 +69,21 @@ public class UserNameAdapter extends ArrayAdapter<UserNameItem> implements View.
         return view;
     }
 
+    /**
+     * 删除以保存的账号
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             //删除当前Item
             case R.id.del_btn:
+                /**
+                 * 待完善
+                 * 以后这里要封装 进行数据操作
+                 * 添加确认对话框防止误删
+                 */
                 itemPos = (int) v.getTag();
-                Log.d("pos_del",v.getTag()+"");
                 list.remove(itemPos);
                 UserNameAdapter.this.notifyDataSetChanged();
                 break;
