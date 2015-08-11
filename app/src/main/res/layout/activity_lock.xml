@@ -6,7 +6,38 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.demos.tencent_qq_ui.Aty.LockActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.demos.tencent_qq_ui.CustomerView.AvatarImageView
+        android:id="@+id/lock_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/notify_tv"
+        android:text="请绘制手势密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lock_avatar"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.demos.tencent_qq_ui.CustomerView.GestureLockView
+        android:id="@+id/lock_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/notify_tv"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:text="忘记密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lock_view"
+        android:layout_marginTop="30dp"
+        />
 
 </RelativeLayout>

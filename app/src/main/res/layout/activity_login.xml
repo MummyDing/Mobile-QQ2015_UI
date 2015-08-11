@@ -52,6 +52,7 @@
         android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         />
     <Button
+        android:id="@+id/login_btn"
         android:text="登 录"
         android:textSize="15sp"
         android:textColor="#fff"

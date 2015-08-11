@@ -1,6 +1,7 @@
 package com.demos.tencent_qq_ui.Aty;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -29,6 +31,7 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
     public static EditText username_inputbox;
     public static EditText password_inputbox;
     ImageButton popupBtn;
+    Button login_btn;
     LinearLayout linearLayout;
     View popupwindow_view;
     ImageButton showUser_btn;
@@ -45,6 +48,7 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
         linearLayout = (LinearLayout) findViewById(R.id.userName_layout);
         password_inputbox = (EditText) findViewById(R.id.password_inputbox);
         username_inputbox = (EditText) findViewById(R.id.username_inputbox);
+        login_btn = (Button) findViewById(R.id.login_btn);
         showUser_btn = (ImageButton) findViewById(R.id.showUser_btn);
         popupBtn = (ImageButton) findViewById(R.id.showUser_btn);
 
@@ -82,6 +86,7 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
         listView.setAdapter(userNameAdapter);
         listView.setOnItemClickListener(this);
         popupBtn.setOnClickListener(this);
+        login_btn.setOnClickListener(this);
 
         userNameAdapter.notifyDataSetChanged();
         initPopupWindow();
@@ -120,6 +125,11 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
                     //一定要update
                     popupWindow.update(0,locationY, WindowManager.LayoutParams.WRAP_CONTENT,WindowManager.LayoutParams.WRAP_CONTENT,true);
                 }
+                break;
+            case R.id.login_btn:
+                Intent intent = new Intent(LoginAciivity.this,LockActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
         }
     }
