@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demos.tencent_qq_ui.CustomerView.SlideView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@drawable/menu_bg"
+    >
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:orientation="horizontal"
+         >
+         <!-- 菜单-->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:paddingLeft="25dp"
+             android:paddingRight="20dp"
+             >
+             <!-- 头像部分-->
+             <LinearLayout
+                 android:layout_marginTop="15dp"
+
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 >
+                 <com.demos.tencent_qq_ui.CustomerView.AvatarImageView
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:src="@drawable/avatar"
+                     />
+                 <TextView
+                     android:text="MummyDing"
+                     android:textSize="20sp"
+                     android:textColor="#fff"
+                     android:layout_marginLeft="10dp"
+                     android:layout_gravity="center"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+             </LinearLayout>
+             <!-- 菜单Item-->
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 >
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     >
+                     <ImageView
+                         android:layout_marginTop="10dp"
+                         android:layout_width="40dp"
+                         android:layout_height="40dp"
+                         android:background="@drawable/icon_file"
+                         />
+                     <TextView
+                         android:text="我的文件"
+                         android:textSize="15sp"
+                         android:textColor="#fff"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:layout_marginLeft="5dp"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         />
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/right_arrow"
+                         android:layout_gravity="center"
+                         />
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+         <!-- 主界面-->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/splash"
+             >
+
+         </LinearLayout>
+         
+     </LinearLayout>
+</com.demos.tencent_qq_ui.CustomerView.SlideView>

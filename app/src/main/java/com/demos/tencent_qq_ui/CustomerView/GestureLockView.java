@@ -20,7 +20,7 @@ public class GestureLockView extends View {
     private int startX , startY ; // 第一个圆点(左上角)的坐标
     private int touchX , touchY ; // 手指坐标
     private int offset;     // 点间距
-    private final int edgeSpec = 20;  //九宫格与View边上的空隙
+    private final int edgeSpec = 25;  //九宫格与View边上的空隙
     private final static int widthDots = 3;  //每个边的圆点数量
     private boolean isFinish ;   //标记绘制结束
     private static Dot [] dots = new Dot[widthDots*widthDots];
@@ -68,14 +68,23 @@ public class GestureLockView extends View {
         paint.setStrokeWidth(5);
         if( dots[0].getState() == DOT_STATE.ERROR){
             paint.setColor(Color.RED);
-        }else{
+        }else {
             paint.setColor(Color.GRAY);
         }
          //画圆
          for(Dot dot : dots){
-             canvas.drawPoint(dot.getX(),dot.getY(),paint);
              canvas.drawCircle(dot.getX(),dot.getY(),radius,paint);
          }
+        //画点
+        paint.setStrokeWidth(10);
+        if(dots[0].getState() == DOT_STATE.NORMAL){
+            paint.setColor(Color.WHITE);
+        }else if(dots[0].getState() == DOT_STATE.SELECTED){
+            paint.setColor(Color.BLUE);
+        }
+        for(Dot dot : dots){
+            canvas.drawPoint(dot.getX(),dot.getY(),paint);
+        }
     }
     void drawLine(Canvas canvas){
         if( dotsSelected.getCount() == 0) return ;
