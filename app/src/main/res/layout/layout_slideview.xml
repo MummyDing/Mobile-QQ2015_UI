@@ -3,26 +3,28 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:scrollbars="none"
     android:background="@drawable/menu_bg"
+
     >
      <LinearLayout
          android:layout_width="wrap_content"
          android:layout_height="match_parent"
          android:orientation="horizontal"
+         android:background="@drawable/qq_setting_bgmask"
          >
-         <!-- 菜单-->
+
+         <!-- 设置-->
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:orientation="vertical"
-             android:paddingLeft="25dp"
-             android:paddingRight="20dp"
              >
              <!-- 头像部分-->
              <LinearLayout
-                 android:layout_marginTop="15dp"
-
+                 android:paddingLeft="30dp"
+                 android:paddingRight="10dp"
+                 android:layout_marginTop="40dp"
                  android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
+                 android:layout_height="60dp"
                  android:orientation="horizontal"
                  >
                  <com.demos.tencent_qq_ui.CustomerView.AvatarImageView
@@ -38,47 +40,329 @@
                      android:layout_gravity="center"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content" />
+                 <ImageView
+                     android:src="@drawable/icon_qs_white"
+                     android:layout_marginLeft="10dp"
+                     android:layout_gravity="center"
+                     android:layout_width="35dp"
+                     android:layout_height="35dp" />
              </LinearLayout>
+
              <!-- 菜单Item-->
              <LinearLayout
+                 android:paddingLeft="25dp"
+                 android:paddingRight="10dp"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
+                 android:orientation="vertical"
                  >
+                 <!-- 个性签名-->
+                 <View
+                     android:background="#A8A8A8"
+                     android:layout_width="match_parent"
+                     android:layout_height="1px"
+                     android:layout_marginTop="20dp"
+                     />
                  <LinearLayout
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content"
                      android:orientation="horizontal"
+                     android:layout_marginTop="5dp"
                      >
                      <ImageView
-                         android:layout_marginTop="10dp"
-                         android:layout_width="40dp"
-                         android:layout_height="40dp"
-                         android:background="@drawable/icon_file"
+                         android:src="@drawable/qq_setting_quotation"
+                         android:layout_gravity="center"
+                         android:layout_width="20dp"
+                         android:layout_height="20dp"
+                         android:scaleType="fitXY"
                          />
                      <TextView
-                         android:text="我的文件"
-                         android:textSize="15sp"
-                         android:textColor="#fff"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_weight="1"
-                         android:layout_marginLeft="5dp"
-                         android:layout_gravity="center"
-                         android:gravity="center"
-                         />
-                     <ImageView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:background="@drawable/right_arrow"
-                         android:layout_gravity="center"
-                         />
 
+                         android:layout_marginLeft="15dp"
+                         android:text="个性签名: talk is cheap!"
+                         android:textColor="#B7B7B7"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content" />
                  </LinearLayout>
 
 
+                 <View
+                     android:background="#A8A8A8"
+                     android:layout_width="match_parent"
+                     android:layout_height="1px"
+                     android:layout_marginTop="5dp"
+                     />
+
+                 <!-- 菜单Item-->
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginTop="20dp"
+                     android:orientation="vertical"
+                     >
+                     <!-- 开通会员-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_huiyuan"
+                             />
+                         <TextView
+                             android:text="开通会员"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <!-- QQ钱包-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_qianbao"
+                             />
+                         <TextView
+                             android:text="QQ钱包"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <!-- 网上营业厅-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_business"
+                             />
+                         <TextView
+                             android:text="网上营业厅"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <!-- 个性装扮-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_zhuangban"
+                             />
+                         <TextView
+                             android:text="个性装扮"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <View
+                         android:background="#A8A8A8"
+                         android:layout_width="match_parent"
+                         android:layout_height="1px"
+                         android:layout_marginTop="10dp"
+                         />
+                     <!-- 我的收藏-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_shoucang"
+                             />
+                         <TextView
+                             android:text="我的收藏"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <!-- 我的相册-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_xiangce"
+                             />
+                         <TextView
+                             android:text="我的相册"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
+
+
+                     <!-- 我的文件-->
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         >
+                         <ImageView
+                             android:layout_width="35dp"
+                             android:layout_height="35dp"
+                             android:background="@drawable/qq_setting_wenjian"
+                             />
+                         <TextView
+                             android:text="我的文件"
+                             android:textSize="15sp"
+                             android:textColor="#fff"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="8dp"
+                             />
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/right_arrow"
+                             android:layout_gravity="center"
+                             />
+                     </LinearLayout>
              </LinearLayout>
 
+             </LinearLayout>
+
+             <!-- 设置&夜间-->
+             <LinearLayout
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="40dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:src="@drawable/qq_setting_setting"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp" />
+                 <TextView
+                     android:text="设置"
+                     android:textColor="#A8A8A8"
+                     android:layout_marginLeft="5dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <View
+                     android:layout_width="1px"
+                     android:layout_height="20dp"
+                     android:layout_marginLeft="30dp"
+                     android:background="#A8A8A8"
+                     />
+
+                 <ImageView
+                     android:src="@drawable/qq_setting_nightmode"
+                     android:layout_marginLeft="30dp"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp" />
+                 <TextView
+                     android:text="夜间"
+                     android:textColor="#A8A8A8"
+                     android:layout_marginLeft="5dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
          </LinearLayout>
 
          <!-- 主界面-->
