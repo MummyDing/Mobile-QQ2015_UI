@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.demos.tencent_qq_ui.CustomerView.AvatarImageView
+        android:id="@+id/msg_avatar"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/avatar"
+        />
+    <TextView
+        android:id="@+id/msg_nickname"
+        android:text="MummyDing"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/msg_avatar"
+        />
+    <TextView
+        android:id="@+id/msg_info"
+        android:text="编程改变世界"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/msg_avatar"
+        android:layout_below="@+id/msg_nickname"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/msg_time"
+        android:text="21:54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        />
+    <TextView
+        android:id="@+id/msg_number"
+        android:text="93"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgdot_style"
+        android:gravity="center"
+        android:layout_below="@+id/msg_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+
+        />
+
+</RelativeLayout>

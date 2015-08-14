@@ -23,7 +23,6 @@ public class QzoneFragment extends Fragment {
 
         Button button = (Button) view.findViewById(R.id.header_imgbtn);
         button.setBackgroundColor(Color.TRANSPARENT);
-        //button.setBackground(null);
         button.setText("更多");
 
         return view;

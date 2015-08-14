@@ -7,6 +7,7 @@
     <include layout="@layout/layout_main_title"/>
     <include layout="@layout/layout_searchbar"/>
     <ListView
+        android:id="@+id/msg_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
