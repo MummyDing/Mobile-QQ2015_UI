@@ -19,7 +19,7 @@ import com.demos.tencent_qq_ui.Aty.R;
 public class ContactFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_msg_fragment,null);
+        View view = inflater.inflate(R.layout.layout_contact_fragment,null);
         TextView title = (TextView) view.findViewById(R.id.title_tv);
         Button button = (Button) view.findViewById(R.id.header_imgbtn);
         title.setText("联系人");

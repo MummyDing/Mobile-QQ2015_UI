@@ -9,6 +9,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import com.demos.tencent_qq_ui.Aty.LoginAciivity;
+import com.demos.tencent_qq_ui.Aty.R;
 import com.nineoldandroids.view.ViewHelper;
 
 /**
@@ -113,6 +114,9 @@ public class SlideView extends HorizontalScrollView{
         ViewHelper.setPivotY(mainView, mainView.getHeight() / 2);
         ViewHelper.setScaleX(mainView, rightScale);
         ViewHelper.setScaleY(mainView, rightScale);
+
+        ViewHelper.setAlpha(mainView.findViewById(R.id.title_avatar), scale);
+        ViewHelper.setTranslationX(mainView.findViewById(R.id.title_avatar), 1-scale);
 
     }
 }
