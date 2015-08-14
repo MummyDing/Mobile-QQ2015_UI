@@ -6,6 +6,7 @@
 
     >
      <LinearLayout
+         android:id="@+id/slide_view_layout"
          android:layout_width="wrap_content"
          android:layout_height="match_parent"
          android:orientation="horizontal"
@@ -367,10 +368,65 @@
 
          <!-- 主界面-->
          <LinearLayout
+             android:id="@+id/main_fragment_layout"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@drawable/splash"
+             android:orientation="vertical"
              >
+             <FrameLayout
+                 android:id="@+id/fragment"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 ></FrameLayout>
+
+             <RadioGroup
+                 android:id="@+id/radioGroup"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:background="#fff"
+                 >
+                 <!-- 消息-->
+                 <RadioButton
+                     android:id="@+id/msg_rbtn"
+                     android:layout_width="wrap_content"
+                     android:layout_height="60dp"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginRight="30dp"
+                     android:button="@null"
+                     android:background="@drawable/msg_bg_selector"
+                     android:layout_gravity="center"
+                     />
+
+                 <!-- 联系人-->
+                 <RadioButton
+                     android:id="@+id/contact_rbtn"
+                     android:layout_width="wrap_content"
+                     android:layout_height="60dp"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginRight="30dp"
+                     android:button="@null"
+                     android:background="@drawable/contact_bg_selector"
+                     android:layout_gravity="center"
+                     />
+
+                 <!-- 动态-->
+                 <RadioButton
+                     android:id="@+id/qzone_rbtn"
+                     android:layout_width="wrap_content"
+                     android:layout_height="60dp"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginRight="30dp"
+                     android:button="@null"
+                     android:background="@drawable/qzone_bg_selector"
+                     android:layout_gravity="center"
+                     />
+
+             </RadioGroup>
 
          </LinearLayout>
          

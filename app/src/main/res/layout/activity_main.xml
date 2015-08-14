@@ -3,7 +3,9 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     >
-    <include layout="@layout/layout_slideview"></include>
+    <include
+        android:id="@+id/slide_view"
+        layout="@layout/layout_slideview"></include>
 
 
 </LinearLayout>

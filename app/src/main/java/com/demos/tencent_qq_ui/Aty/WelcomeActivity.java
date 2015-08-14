@@ -21,7 +21,7 @@ public class WelcomeActivity extends Activity {
             public boolean handleMessage(Message msg) {
                 if(msg.what == 1){
                     finish();
-                    Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
+                    Intent intent = new Intent(WelcomeActivity.this,LoginAciivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }

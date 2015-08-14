@@ -1,6 +1,7 @@
 package com.demos.tencent_qq_ui.CustomerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -138,6 +139,8 @@ public class GestureLockView extends View {
                 isFinish = true;
                 invalidate();
                 // 检查是否 正确～～
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                getContext().startActivity(intent);
                 dotsSelected.clear();
                 initDots();
                 break;
