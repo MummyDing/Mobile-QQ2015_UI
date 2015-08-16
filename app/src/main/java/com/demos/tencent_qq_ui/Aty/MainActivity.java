@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.demos.tencent_qq_ui.CustomerView.AvatarImageView;
 import com.demos.tencent_qq_ui.Fragment.ContactFragment;
 import com.demos.tencent_qq_ui.Fragment.MsgFragment;
 import com.demos.tencent_qq_ui.Fragment.QzoneFragment;
@@ -22,6 +23,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     private View mainView , slideView;
     private RadioButton msg_rbtn;
     private RadioGroup radioGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 
     }
     void initData(){
-        msg_rbtn = (RadioButton) findViewById(R.id.msg_rbtn);
+         msg_rbtn = (RadioButton) findViewById(R.id.msg_rbtn);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         msg_rbtn.setChecked(true);
         radioGroup.setOnCheckedChangeListener(this);
@@ -66,4 +68,6 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                 break;
         }
     }
+
+
 }
