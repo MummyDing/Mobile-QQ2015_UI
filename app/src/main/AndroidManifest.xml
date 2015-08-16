@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.demos.tencent_qq_ui.Aty.WelcomeActivity"
-            android:label="@string/title_activity_welcome" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

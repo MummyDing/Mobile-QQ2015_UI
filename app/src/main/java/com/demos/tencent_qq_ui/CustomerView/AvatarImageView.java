@@ -1,9 +1,7 @@
 package com.demos.tencent_qq_ui.CustomerView;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -13,13 +11,8 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Base64;
-import android.util.Log;
 import android.widget.ImageView;
 
-import com.demos.tencent_qq_ui.Aty.LoginAciivity;
-
-import java.io.ByteArrayOutputStream;
 
 /**
  * Created by mummyding on 15-8-7.
@@ -84,8 +77,8 @@ public class AvatarImageView extends ImageView {
 
     private Bitmap toRoundCorner(Bitmap bitmap, int pixels) {
 
-        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
-                bitmap.getHeight(), Bitmap.Config.ARGB_4444);
+        //指定为 ARGB_4444 可以减小图片大小
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_4444);
         Canvas canvas = new Canvas(output);
 
         final int color = 0xff424242;

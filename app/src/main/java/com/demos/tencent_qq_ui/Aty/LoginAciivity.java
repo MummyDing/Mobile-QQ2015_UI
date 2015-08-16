@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -41,10 +42,15 @@ public class LoginAciivity extends Activity implements View.OnClickListener,Popu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //不显示程序的标题栏
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //不显示系统的标题栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
+
         init();
-
-
     }
     void init(){
         linearLayout = (LinearLayout) findViewById(R.id.userName_layout);
