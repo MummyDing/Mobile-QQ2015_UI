@@ -1,5 +1,5 @@
 ## 这个Demo还是我刚开始学Android那个时候写的,只是那个时候用来练手的,没打算管.不过貌似有人关注,给star,过段时间我重新写一下吧~_~ ---2016年1月15日
-###本人其他项目: [https://github.com/MummyDing/Leisure](https://github.com/MummyDing/Leisure) 欢迎交流
+###本人其他项目: [闲暇 一款阅读类App 已有4k+ 下载量](https://github.com/MummyDing/Leisure) [多图选择器(支持图片预览 高效加载不怕OOM)](https://github.com/MummyDing/MultiImageChooser)欢迎交流
 # Mobile-QQ2015_UI
 高仿QQ2015(Android) 界面
 Author: MummyDing<br>
