@@ -1,3 +1,4 @@
+## 这个Demo还是我刚开始学Android那个时候写的,只是那个时候用来练手的,没打算管.不过貌似有人关注,给star,过段时间我重新写一下吧~_~ ---2016年1月15日
 # Mobile-QQ2015_UI
 高仿QQ2015(Android) 界面
 Author: MummyDing<br>
